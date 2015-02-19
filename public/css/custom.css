@@ -1,27 +1,72 @@
 body {
   text-align: center;
+  font-family: "Amble"
 }
 
+h2 {
+  color: white;
+}
+
+.main-container {
+  display: inline-block;
+  width: 1000px;
+  height: 250px;
+  background-color: grey;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #888888;
+  border-style: solid;
+  border-width: 2px;
+  margin: auto;
+  margin-top: 80px;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+a:-webkit-any-link {
+  color: black;;
+  text-decoration: none;
+  cursor: auto;
+}
+
+a:hover {
+  color: black;
+}
 .title {
-  padding: 1.5%;
-  font-size: 2.5em;
-}
-
-.message-container {
-  padding: 2%;
+  padding-top: 2%;
+  font-size: 2em;
+  color: black;
 }
 
 .forms-container {
-  padding-top: 2%;
+  padding-top: 0.5%;
 }
 
 .message-header {
-  font-size: 2em;
-  padding: 2%;
+  font-size: 1.5em;
+  padding-top: 0.7%;
 }
 
+.message-container {
+  display: inline-block;
+  width: 1000px;
+  background-color: grey;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #888888;
+  border-style: solid;
+  border-width: 2px;
+  margin: auto;
+  margin-top: 3.5%;
+}
+
+
 .message-input-field {
-  width: 40%;
+  width: 50%;
   height: 40px;
   font-size: 1em;
 }
@@ -31,6 +76,39 @@ body {
   font-size: 1em;
 }
 
-.decrypt-container {
-  padding-top: 1%;
+.encrypt-button {
+  padding: 0.75%;
+  font-size: 1em;
+  background-color: black;
+}
+
+.decrypt-button {
+  padding: 0.75%;
+  font-size: 1em;
+}
+
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+  background-color: black;
+  color: white;
+  border: grey;
+  font-family: "Amble"
+}
+
+.-webkit-input-placeholder {
+  font-family: "Amble"
+}
+
+.encrypted-value {
+  margin-top: -4%;
+  padding-bottom: 2%;
+}
+
+.decrypted-value {
+  margin-top: -2%;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: black;
 }
