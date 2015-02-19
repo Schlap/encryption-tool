@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-  <title>nCrypt</title>
+  <title>AES-256 Encryption</title>
   <meta charset="UTF-8">
   <link rel='stylesheet' type='text/css' href='./css/reset.css'>
   <!-- <link rel='stylesheet' type='text/css' href='./css/normalize.css'>
@@ -15,8 +15,7 @@
   <h1 class='title'>AES-256 Text Encryption</h1>
 </section>
 
-<section class='left-side'>
-
+<section class='forms-container'>
   <section class='encrypt-container'>
     <form action='/encrypt' method='post' class='form'>
       <input type='text' name='message' placeholder='Enter message here...' class='message-input-field'>
@@ -27,21 +26,19 @@
 
   <section class='decrypt-container'>
     <form action='/decrypt' method='post' class='form'>
-      <input type='text' name='encrypted_message' placeholder='Enter encrypted message here...' class='message-input-field'>
+      <input type='text' name='encrypted_message' placeholder='Copy and paste encrypted message here...' class='message-input-field'>
       <input type='text' name='decrypt_key' placeholder='Enter key here...' class='key-input-field'>
       <input type='submit' value='decrypt' class='decrypt-button'>
     </form>
   </section>
-
 </section>
 
-<section class='right-side'>
-  <section class='container'>
-    <h3>Message:</h3>
+  <section class='message-container'>
+    <p class='message-header'>Message:</p>
     <p class='encrypted-value'><%=@encrypted_value %></p>
     <p class='decrypted-value'><%=@decrypted_value %></p>
   </section>
-</section>
+
 
 <section class='footer'>
 </section>
