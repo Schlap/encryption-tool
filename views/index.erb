@@ -3,8 +3,8 @@
   <title>nCrypt</title>
   <meta charset="UTF-8">
   <link rel='stylesheet' type='text/css' href='./css/reset.css'>
-  <link rel='stylesheet' type='text/css' href='./css/normalize.css'>
-  <link rel='stylesheet' type='text/css' href='./css/skeleton.css'>
+  <!-- <link rel='stylesheet' type='text/css' href='./css/normalize.css'>
+  <link rel='stylesheet' type='text/css' href='./css/skeleton.css'> -->
   <link rel='stylesheet' type='text/css' href='./css/custom.css'>
 
 </head>
@@ -12,35 +12,38 @@
 <body>
 
 <section class='navbar'>
-  <h1 class='title'>nCrypt</h1>
+  <h1 class='title'>AES-256 Text Encryption</h1>
 </section>
 
-<section class='container'>
-  <form action='/encrypt' method='post' class='form'>
-    <input type='text' name='message' placeholder='Enter message here...' class='message-input-field'>
-    <input type='text' name='key' placeholder='Enter key here...' class='key-input-field'>
-    <input type='submit' value='encrypt' class='encrypt-button'>
-  </form>
+<section class='left-side'>
+
+  <section class='encrypt-container'>
+    <form action='/encrypt' method='post' class='form'>
+      <input type='text' name='message' placeholder='Enter message here...' class='message-input-field'>
+      <input type='text' name='key' placeholder='Enter key here...' class='key-input-field'>
+      <input type='submit' value='encrypt' class='encrypt-button'>
+    </form>
+  </section>
+
+  <section class='decrypt-container'>
+    <form action='/decrypt' method='post' class='form'>
+      <input type='text' name='encrypted_message' placeholder='Enter encrypted message here...' class='message-input-field'>
+      <input type='text' name='decrypt_key' placeholder='Enter key here...' class='key-input-field'>
+      <input type='submit' value='decrypt' class='decrypt-button'>
+    </form>
+  </section>
+
 </section>
 
-<section class='encrypted-value'>
-  <h3><%=@encrypted_value %></h1>
-</section>
-
-<section class='container'>
-  <form action='/decrypt' method='post' class='form'>
-    <input type='text' name='encrypted_message' placeholder='Enter encrypted message here...' class='message-input-field'>
-    <input type='text' name='decrypt_key' placeholder='Enter key here...' class='key-input-field'>
-    <input type='submit' value='decrypt' class='decrypt-button'>
-  </form>
-</section>
-
-<section class='decrypted-value'>
-  <h3><%=@decrypted_value %></h1>
+<section class='right-side'>
+  <section class='container'>
+    <h3>Message:</h3>
+    <p class='encrypted-value'><%=@encrypted_value %></p>
+    <p class='decrypted-value'><%=@decrypted_value %></p>
+  </section>
 </section>
 
 <section class='footer'>
-  <p class='signature'>This was designed by Edward Snowden</p>
 </section>
 
 </body>

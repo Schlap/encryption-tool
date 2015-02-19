@@ -6,7 +6,7 @@ feature 'User sees result' do
 
     fill_in 'message', :with => 'hello'
     click_button 'encrypt'
-    expect(page).to have_content ''
+    expect(page).to have_selector(".encrypted-value")
   end
 
 end
