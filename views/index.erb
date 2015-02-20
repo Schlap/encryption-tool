@@ -13,28 +13,28 @@
 <body>
 
 <section class='navbar'>
-  <a href='/'><h2>AES-256 Text Encryption</h2></a>
+  <a href='/'></a>
 </section>
 
 <section class='main-container'>
   <section class='header'>
-    <h1 class='title'><a href='/'>AES-256 Text Encryption</a></h1>
+    <p class='title'><a href='/'>AES-256 Text Encryption</a></p>
   </section>
 
   <section class='forms-container'>
 
     <section class='encrypt-container'>
       <form action='/encrypt' method='post' class='form'>
-        <input type='text' name='message' placeholder='Enter message here...' class='message-input-field'>
-        <input type='text' name='key' placeholder='Enter key here...' class='key-input-field'>
+        <input type='text' name='message' placeholder='Enter message here...' class='message-input-field' required="required">
+        <input type='text' name='key' placeholder='Enter key here...' class='key-input-field' required="required">
         <input type='submit' value='encrypt' class='encrypt-button'>
       </form>
     </section>
 
     <section class='decrypt-container'>
       <form action='/decrypt' method='post' class='form'>
-        <input type='text' name='encrypted_message' placeholder='Copy and paste encrypted message here...' class='message-input-field'>
-        <input type='text' name='decrypt_key' placeholder='Enter key here...' class='key-input-field'>
+        <input type='text' name='encrypted_message' placeholder='Copy and paste encrypted message here...' class='message-input-field' required="required">
+        <input type='text' name='decrypt_key' placeholder='Enter key here...' class='key-input-field' required="required">
         <input type='submit' value='decrypt' class='decrypt-button'>
       </form>
     </section>
@@ -44,7 +44,7 @@
   </section>
 
   <section class='message-container'>
-    <p class='message-header'><u>Message:</u></p>
+    <p class='message-header'>Message:</p>
     <p class='encrypted-value'><%=@encrypted_value %></p>
     <p class='decrypted-value'><%=@decrypted_value %></p>
   </section>

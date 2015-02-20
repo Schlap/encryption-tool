@@ -45,5 +45,6 @@ PLATFORMS
 DEPENDENCIES
   capybara
   gibberish
+  rack
   rspec
   sinatra
