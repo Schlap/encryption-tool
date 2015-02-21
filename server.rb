@@ -17,9 +17,9 @@ post '/encrypt' do
 end
 
 post '/decrypt' do
-  encrypted_message = params[:encrypted_message].to_s
-  decrypt_key = params[:decrypt_key].to_s
-  cipher = Gibberish::AES.new(decrypt_key)
-  @decrypted_value = cipher.decrypt(encrypted_message)
+  message = params[:message].to_s
+  key = params[:key].to_s
+  cipher = Gibberish::AES.new(key)
+  @decrypted_value = cipher.decrypt(message)
   erb :index
 end

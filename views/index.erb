@@ -4,7 +4,6 @@
   <title>AES-256 Encryption</title>
   <meta charset="UTF-8">
   <link rel='stylesheet' type='text/css' href='./css/reset.css'>
-  <!-- <link rel='stylesheet' type='text/css' href='./css/normalize.css'> -->
   <link rel='stylesheet' type='text/css' href='./css/skeleton.css'>
   <link rel='stylesheet' type='text/css' href='./css/custom.css'>
 
@@ -13,43 +12,31 @@
 <body>
 
 <section class='navbar'>
-  <a href='/'></a>
+  <a href='/'><img src="./images/black-lock.png" class="black-lock-image"></img></a>
 </section>
 
 <section class='main-container'>
+
   <section class='header'>
     <p class='title'><a href='/'>AES-256 Text Encryption</a></p>
   </section>
 
-  <section class='forms-container'>
-
-    <section class='encrypt-container'>
-      <form action='/encrypt' method='post' class='form'>
-        <input type='text' name='message' placeholder='Enter message here...' class='message-input-field' required="required">
-        <input type='text' name='key' placeholder='Enter key here...' class='key-input-field' required="required">
-        <input type='submit' value='encrypt' class='encrypt-button'>
-      </form>
-    </section>
-
-    <section class='decrypt-container'>
-      <form action='/decrypt' method='post' class='form'>
-        <input type='text' name='encrypted_message' placeholder='Copy and paste encrypted message here...' class='message-input-field' required="required">
-        <input type='text' name='decrypt_key' placeholder='Enter key here...' class='key-input-field' required="required">
-        <input type='submit' value='decrypt' class='decrypt-button'>
-      </form>
-    </section>
-
+  <section class='encrypt-container'>
+    <form class='form'>
+      <input type='text' name='message' placeholder='Enter message here...' class='message-input-field' autocomplete='off' required="required">
+      <input type='text' name='key' placeholder='Enter key here...' class='key-input-field' required="required">
+      <input type='submit' value='encrypt' formaction='/encrypt' class='encrypt-button' formmethod='post'>
+      <input type='submit' value='decrypt' formaction='/decrypt' class='decrypt-button' formmethod='post'>
+    </form>
   </section>
 
-  </section>
+</section>
 
-  <section class='message-container'>
-    <p class='message-header'>Message:</p>
-    <p class='encrypted-value'><%=@encrypted_value %></p>
-    <p class='decrypted-value'><%=@decrypted_value %></p>
-  </section>
+<section class='message-container'>
 
-  <section class='footer'>
+  <p class='message-header'>Message:</p>
+  <p class='encrypted-value'><%=@encrypted_value %><%=@decrypted_value %></p>
+
 </section>
 
 </body>
