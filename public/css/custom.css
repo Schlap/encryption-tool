@@ -1,6 +1,7 @@
 body {
   text-align: center;
   font-family: "Amble";
+  background-image: url("/images/encryption-background.png");
 }
 
 input {
@@ -30,7 +31,7 @@ h2 {
   background-color: #D3D3D3;
   border: 1px solid black;
   border-radius: 10px;
-  box-shadow: 10px 10px 5px #888888;
+  box-shadow: 5px 5px 2.5px black;
   border-style: solid;
   border-width: 2px;
   margin: auto;
@@ -60,7 +61,7 @@ h2 {
   background-color: #D3D3D3;
   border: 1px solid black;
   border-radius: 10px;
-  box-shadow: 10px 10px 5px #888888;
+  box-shadow: 5px 5px 2.5px black;
   border-style: solid;
   border-width: 2px;
   margin: auto;
