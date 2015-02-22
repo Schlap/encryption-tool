@@ -65,6 +65,7 @@ h2 {
   border-width: 2px;
   margin: auto;
   margin-top: 3.5%;
+  height: 400px;
 }
 
 
@@ -72,6 +73,9 @@ h2 {
   width: 50%;
   height: 40px;
   font-size: 1em;
+}
+
+input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
 
 }
 
